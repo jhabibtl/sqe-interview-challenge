@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             taskInput.value = '';
             saveAndRenderTasks();
         } else {
-            alert('A tarefa não pode estar vazia!'); // Um bug potencial aqui!
+            alert('Task cannot be empty!'); // potential bug
         }
     }
 
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             li.addEventListener('click', () => toggleTaskStatus(index));
 
             const removeBtn = document.createElement('button');
-            removeBtn.textContent = 'Remover';
+            removeBtn.textContent = 'Remove';
             removeBtn.classList.add('remove-btn');
             removeBtn.addEventListener('click', (e) => {
                 e.stopPropagation(); // Prevents toggleTaskStatus from firing
